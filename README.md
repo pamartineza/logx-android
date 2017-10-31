@@ -49,7 +49,7 @@ Add library implementation dependency in your App(android) module:
 [![Release](https://jitpack.io/v/pamartineza/logx-android.svg)](https://jitpack.io/#pamartineza/logx-android)
 ```
 dependencies {
-  implementation "com.github.pamartineza:logx-android:1.0.0"
+  implementation "com.github.pamartineza:logx-android:1.1.1"
 }
 ```
 Add library interface contract in your "pure" java/kotlin modules:
