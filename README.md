@@ -1,4 +1,4 @@
-# Logx-android
+# Logx-Android
 Clean Code Logx Kotlin implementation for Android with optional Crashlytics integration for repporting Non-Fatal exceptions
 
 If you are using a Clean Code project structure this library allows you to write logs not only from your "android" code but also from your Domain, Usecases, Presenters, etc...
