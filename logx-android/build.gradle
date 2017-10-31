@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 ext {
-    artifactVersionCode= 2
-    artifactVersionName = '1.1.1'
+    artifactVersionCode= 3
+    artifactVersionName = '1.1.2'
 }
 
 group = 'com.github.pamartineza'
@@ -52,7 +52,7 @@ dependencies {
 
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-    api 'com.github.pamartineza:logx:1.1.1'
+    api 'com.github.pamartineza:logx:1.1.2'
 
     //Crashlytics is only used if available to report non-fatals
     provided('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
