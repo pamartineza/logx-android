@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 ext {
-    artifactVersionCode= 1
-    artifactVersionName = '1.0.0'
+    artifactVersionCode= 2
+    artifactVersionName = '1.1.1'
 }
 
 group = 'com.github.pamartineza'

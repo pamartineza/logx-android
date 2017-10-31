@@ -8,6 +8,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/.idea/sonarIssues.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -64,6 +74,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/logx-android/src/main/kotlin/com/greenlionsoft/logxandroid/AndroidLogs.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MaterialMBC/app/build.gradle">
           <value>
             <set />
           </value>
