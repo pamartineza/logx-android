@@ -59,7 +59,7 @@ Add library interface contract in your "pure" java/kotlin modules:
 dependencies {
   implementation "com.github.pamartineza:logx:1.1.1"
 }
-
+```
 
 ## Clean Code Logx interface contract
-Logx interface contract is available here -> https://github.com/pamartineza/logx
+Logx interface contract code is available here -> https://github.com/pamartineza/logx
