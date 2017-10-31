@@ -2,7 +2,13 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.pamartineza'
+ext {
+    artifactVersionCode= 1
+    artifactVersionName = '1.0.0'
+}
+
+group = 'com.github.pamartineza'
+version = artifactVersionName
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
@@ -15,8 +21,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode artifactVersionCode
+        versionName artifactVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -48,6 +54,7 @@ dependencies {
 
     api 'com.github.pamartineza:logx:1.1.1'
 
+    //Crashlytics is only used if available to report non-fatals
     provided('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
         transitive = true;
     }
