@@ -44,7 +44,8 @@ allprojects {
   }
 }  
 ```
-Add library dependency in your module:
+Add library dependency in your module: [![Release](https://jitpack.io/v/pamartineza/logx-android.svg)]
+(https://jitpack.io/#User/Repo)
 ```
 dependencies {
   implementation "com.github.pamartineza:logx-android:1.0.0"
