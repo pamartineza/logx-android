@@ -35,11 +35,9 @@ class AndroidLogs(val areLogsEnabled: Boolean, var defaultTag: String = "LOGX") 
         Log.e(tag, message)
     }
 
-    override fun e(tag: String, message: String, e: Throwable) {
+    override fun e(tag: String, message: String, e: Throwable?) {
         Log.e(tag, message, e)
-        if (isCrashlyticsAvailable && null != Crashlytics.getInstance()) {
-            Crashlytics.logException(e)
-        }
+        reportException(e)
 
     }
 
@@ -63,19 +61,18 @@ class AndroidLogs(val areLogsEnabled: Boolean, var defaultTag: String = "LOGX") 
         e(defaultTag, message)
     }
 
-    override fun e(message: String, e: Throwable) {
+    override fun e(message: String, e: Throwable?) {
         e(defaultTag, message, e)
-        if (isCrashlyticsAvailable && null != Crashlytics.getInstance()) {
-            Crashlytics.logException(e)
-        }
     }
 
     override fun areLogsEnabled(): Boolean {
         return areLogsEnabled
     }
 
-    override fun reportException(e: Throwable) {
-        if (isCrashlyticsAvailable && null != Crashlytics.getInstance()) {
+    override fun reportException(e: Throwable?) {
+        if (e != null
+                && isCrashlyticsAvailable
+                && null != Crashlytics.getInstance()) {
             Crashlytics.logException(e)
         }
     }

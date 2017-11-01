@@ -31,6 +31,9 @@ Logx.e("This is an error log with an exception that will be sent to Crashlytics 
 //Repports an exception to crashlytics if available
 Logx.repportException("e")
 
+//Override enabled status (for all variants)
+val enabledStatusOverride = true
+Logx.d(enabledStatusOverride, "This log will be printed even if logs are disabled")
 ```
 
 
