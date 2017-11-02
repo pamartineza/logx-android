@@ -47,12 +47,13 @@ allprojects {
   }
 }  
 ```
-Add library implementation dependency in your App(android) module:
+Add library implementation dependency and library interface contract in your App(android) module:
 
 [![Release](https://jitpack.io/v/pamartineza/logx-android.svg)](https://jitpack.io/#pamartineza/logx-android)
 ```
 dependencies {
   implementation "com.github.pamartineza:logx-android:x.y.z"
+  implementation "com.github.pamartineza:logx:x.y.z"
 }
 ```
 Add library interface contract in your "pure" java/kotlin modules:
