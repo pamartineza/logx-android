@@ -4,8 +4,8 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.github.ben-manes.versions'
 
 ext {
-    artifactVersionCode= 4
-    artifactVersionName = '1.1.3'
+    artifactVersionCode= 5
+    artifactVersionName = '1.1.5'
 }
 
 group = 'com.github.pamartineza'
@@ -17,11 +17,11 @@ repositories {
 }
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode artifactVersionCode
         versionName artifactVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -49,14 +49,14 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation "com.android.support:appcompat-v7:$support_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    api 'com.github.pamartineza:logx:1.1.4'
+    api 'com.github.pamartineza:logx:1.1.5'
     //Crashlytics is only used if available to report non-fatals
-    compileOnly('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+    compileOnly("com.crashlytics.sdk.android:crashlytics:$crashlytics_version@aar") {
         transitive = true;
     }
 }
