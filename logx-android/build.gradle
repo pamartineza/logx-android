@@ -3,10 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.github.ben-manes.versions'
 
-ext {
-    artifactVersionCode= 5
-    artifactVersionName = '1.1.5'
-}
+
 
 group = 'com.github.pamartineza'
 version = artifactVersionName
@@ -54,7 +51,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    api 'com.github.pamartineza:logx:1.1.5'
+    api "com.github.pamartineza:Logx:$artifactVersionName"
     //Crashlytics is only used if available to report non-fatals
     compileOnly("com.crashlytics.sdk.android:crashlytics:$crashlytics_version@aar") {
         transitive = true;

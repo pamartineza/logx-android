@@ -9,3 +9,4 @@
 .externalNativeBuild
 /.idea/misc.xml
 /.idea/sonarIssues.xml
+/.idea/dbnavigator.xml
