@@ -2,12 +2,12 @@
 
 buildscript {
 
-    ext.kotlin_version = '1.2.21'
-    ext.crashlytics_version = '2.9.0'
-    ext.support_version = '27.0.2'
+    ext.kotlin_version = '1.2.30'
+    ext.crashlytics_version = '2.9.1'
+    ext.support_version = '27.1.0'
 
-    ext.artifactVersionCode= 8
-    ext.artifactVersionName = '1.1.8'
+    ext.artifactVersionCode= 9
+    ext.artifactVersionName = '1.1.9'
     
     repositories {
         google()
