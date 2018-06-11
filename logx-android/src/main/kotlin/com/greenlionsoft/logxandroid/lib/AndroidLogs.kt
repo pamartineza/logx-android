@@ -1,11 +1,15 @@
-package com.greenlionsoft.logxandroid
+package com.greenlionsoft.logxandroid.lib
 
 import android.util.Log
 import com.crashlytics.android.Crashlytics
-import com.greenlionsoft.logx.ILogx
+import com.greenlionsoft.logxandroid.mvp.ILogx
 
 
 class AndroidLogs(val areLogsEnabled: Boolean, var defaultTag: String = "LOGX") : ILogx {
+
+    override fun getTag(): String {
+        return defaultTag
+    }
 
     val isCrashlyticsAvailable: Boolean = try {
         Class.forName("com.crashlytics.android.Crashlytics")
@@ -70,10 +74,15 @@ class AndroidLogs(val areLogsEnabled: Boolean, var defaultTag: String = "LOGX") 
     }
 
     override fun reportException(e: Throwable?) {
-        if (e != null
-                && isCrashlyticsAvailable
-                && null != Crashlytics.getInstance()) {
-            Crashlytics.logException(e)
+        try {
+            if (e != null
+                    && isCrashlyticsAvailable
+                    && null != Crashlytics.getInstance()) {
+                Crashlytics.logException(e)
+            }
+        } catch (error: Exception) {
+            //This may happen if Crashlytics is not initialized
+            Log.e(defaultTag, "Failed to report exception", error)
         }
     }
 }

@@ -3,8 +3,8 @@ package com.greenlionsoft.logxdemo
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.crashlytics.android.Crashlytics
-import com.greenlionsoft.logx.Logx
-import com.greenlionsoft.logxandroid.AndroidLogs
+import com.greenlionsoft.logxandroid.lib.AndroidLogsAutoTag
+import com.greenlionsoft.logxandroid.mvp.Logx
 import io.fabric.sdk.android.Fabric
 
 class MainActivity : AppCompatActivity() {
@@ -14,8 +14,9 @@ class MainActivity : AppCompatActivity() {
         Fabric.with(this, Crashlytics())
         setContentView(R.layout.activity_main)
 
-        Logx.setLogger(AndroidLogs(BuildConfig.DEBUG, "LOGX-DEMO"))
-        Logx.v("Hello d")
+        //Logx.setLogger(AndroidLogs(BuildConfig.DEBUG, "LOGX-DEMO"))
+        Logx.setLogger(AndroidLogsAutoTag(BuildConfig.DEBUG))
+        Logx.v("Hello v")
         Logx.d("Hello d")
         Logx.i("Hello i")
         Logx.w("Hello w")
