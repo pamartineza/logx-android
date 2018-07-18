@@ -112,7 +112,7 @@ class AndroidLogsAutoTag(val areLogsEnabled: Boolean) : ILogx {
             }
         } catch (error: Exception) {
             //This may happen if Crashlytics is not initialized
-            Log.e(getTag(), "Failed to report exception", error)
+            Log.e(getTag(), "Failed to report exception", e)
         }
     }
 }

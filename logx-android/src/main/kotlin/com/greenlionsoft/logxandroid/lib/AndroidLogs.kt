@@ -82,7 +82,7 @@ class AndroidLogs(val areLogsEnabled: Boolean, var defaultTag: String = "LOGX") 
             }
         } catch (error: Exception) {
             //This may happen if Crashlytics is not initialized
-            Log.e(defaultTag, "Failed to report exception", error)
+            Log.e(defaultTag, "Failed to report exception", e)
         }
     }
 }
