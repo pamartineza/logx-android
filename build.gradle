@@ -2,19 +2,19 @@
 
 buildscript {
 
-    ext.kotlin_version = '1.2.41'
-    ext.crashlytics_version = '2.9.3'
+    ext.kotlin_version = '1.2.51'
+    ext.crashlytics_version = '2.9.4'
     ext.support_version = '27.1.1'
 
-    ext.artifactVersionCode= 11
-    ext.artifactVersionName = '1.1.11'
+    ext.artifactVersionCode= 12
+    ext.artifactVersionName = '1.1.12'
     
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0-alpha17'
+        classpath 'com.android.tools.build:gradle:3.2.0-beta04'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
