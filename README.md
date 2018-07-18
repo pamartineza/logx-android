@@ -53,17 +53,5 @@ Add library implementation dependency and library interface contract in your App
 ```
 dependencies {
   implementation "com.github.pamartineza:logx-android:x.y.z"
-  implementation "com.github.pamartineza:logx:x.y.z"
 }
 ```
-Add library interface contract in your "pure" java/kotlin modules:
-
-[![Release](https://jitpack.io/v/pamartineza/logx.svg)](https://jitpack.io/#pamartineza/logx)
-```
-dependencies {
-  implementation "com.github.pamartineza:logx:x.y.z"
-}
-```
-
-## Clean Code Logx interface contract
-Logx interface contract code is available here -> https://github.com/pamartineza/logx
