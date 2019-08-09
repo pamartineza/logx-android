@@ -3,7 +3,7 @@
 buildscript {
 
     ext.kotlin_version = '1.3.41'
-    ext.crashlytics_version = '2.9.4'
+    ext.crashlytics_version = '2.10.1'
     ext.support_version = '27.1.1'
 
     ext.artifactVersionCode= 12
@@ -17,11 +17,13 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.5.0-rc03'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
     }
 }
 
 plugins {
     id 'com.github.ben-manes.versions' version '0.22.0'
+    id "com.github.plnice.canidropjetifier" version "0.4"
 }
 
 allprojects {

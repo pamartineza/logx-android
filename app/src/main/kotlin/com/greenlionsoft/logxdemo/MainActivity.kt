@@ -1,7 +1,7 @@
 package com.greenlionsoft.logxdemo
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.crashlytics.android.Crashlytics
 import com.greenlionsoft.logxandroid.lib.AndroidLogsAutoTag
 import com.greenlionsoft.logxandroid.mvp.Logx
